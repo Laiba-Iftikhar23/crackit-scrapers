@@ -1,0 +1,147 @@
+{
+  "fixture_id": "pjobs_1",
+  "source_name": "Punjab Jobs",
+  "source_url": "https://jobs.punjab.gov.pk/new_recruit/job_detail/assistant-director-electrical-mechanical-1",
+  "original_doc_url": "https://jobs.punjab.gov.pk/PJP-Uploads/news_advertisements/1792648876_Final Advertisement 22102026.jpg",
+  "fetched_at": "2026-10-23T11:44:41+00:00",
+  "method": "fetch (HTML) + OCR of ad image",
+  "currently_open_at_fetch": true,
+  "extracted_by": "manual extraction by Claude in Phase 0 (not the production Gemini extractor)",
+  "raw_files": [
+    "raw/pjobs_ad_em.html",
+    "raw/pjobs_ad_em_img.ocr.txt"
+  ],
+  "raw_sha256": {
+    "raw/pjobs_ad_em.html": "a1beae077e7702bfe27e36e439bfe427253d5f528d8c7dfe59d3e21e7fc13f01"
+  },
+  "fields": {
+    "org": {
+      "value": "Punjab Masstransit Authority",
+      "quote": "JOB OPPORTUNITIES IN THE PUNJAB MASSTRANSIT AUTHORITY",
+      "from": "raw/pjobs_ad_em_img.ocr.txt",
+      "note": "org name only appears in the ad image, not the HTML"
+    },
+    "post_title": {
+      "value": "Assistant Director (Electrical & Mechanical)",
+      "quote": "Assistant Director (Electrical & Mechanical) Job Posted 22-10-2026",
+      "from": "raw/pjobs_ad_em.html"
+    },
+    "bps": {
+      "value": "N/A (contract)",
+      "quote": "Level N/A Not Applicable",
+      "from": "raw/pjobs_ad_em.html",
+      "note": "source states no scale; contractual post"
+    },
+    "vacancies": {
+      "value": 2,
+      "quote": "No. of Position: 02",
+      "from": "raw/pjobs_ad_em.html"
+    },
+    "age_limit": {
+      "value": {
+        "min": 25,
+        "max": 40
+      },
+      "quote": "Age 25 - 40",
+      "from": "raw/pjobs_ad_em.html",
+      "note": "the ad text itself only says 'up to 40'; the minimum 25 is from the portal's summary",
+      "also_from": [
+        {
+          "quote": "Age: Up to 40 years",
+          "from": "raw/pjobs_ad_em.html"
+        }
+      ]
+    },
+    "qualification": {
+      "value": "Bachelors/Masters in Electrical/Mechanical Engineering (16 years, HEC); PEC registration",
+      "quote": "Bachelors/Masters Degree in Electrical/Mechanical Engineering (16 years education from HEC recognized institute)",
+      "from": "raw/pjobs_ad_em.html"
+    },
+    "domicile_quota": {
+      "value": "Domicile required",
+      "quote": "Domicile is required for this position.",
+      "from": "raw/pjobs_ad_em.html"
+    },
+    "gender": {
+      "value": "Both",
+      "quote": "Gender Both",
+      "from": "raw/pjobs_ad_em.html"
+    },
+    "experience": {
+      "value": "5 years relevant",
+      "quote": "with 05 years of relevant experience",
+      "from": "raw/pjobs_ad_em.html"
+    },
+    "test_service": {
+      "value": null,
+      "quote": null
+    },
+    "last_date": {
+      "value": "2026-11-08",
+      "quote": "Last Date to Apply 08-11-2026",
+      "from": "raw/pjobs_ad_em.html",
+      "also_from": [
+        {
+          "quote": "by November 08,2026",
+          "from": "raw/pjobs_ad_em_img.ocr.txt"
+        }
+      ]
+    },
+    "ad_no": {
+      "value": null,
+      "quote": null
+    }
+  },
+  "checks": {
+    "quote_back": {
+      "org": true,
+      "post_title": true,
+      "bps": true,
+      "vacancies": true,
+      "age_limit": true,
+      "qualification": true,
+      "domicile_quota": true,
+      "gender": true,
+      "experience": true,
+      "last_date": true
+    },
+    "parse_check": {
+      "last_date": true,
+      "bps": true,
+      "age_limit": true
+    },
+    "sanity": {
+      "last_date_not_past": true,
+      "bps_known_scale": true,
+      "age_range_ok": true,
+      "vacancies_positive_int": true
+    },
+    "ocr_only_fields": [
+      "org"
+    ],
+    "conflicts": []
+  },
+  "completeness": {
+    "filled": [
+      "org",
+      "post_title",
+      "bps",
+      "vacancies",
+      "age_limit",
+      "qualification",
+      "domicile_quota",
+      "gender",
+      "experience",
+      "last_date"
+    ],
+    "missing": [
+      "test_service",
+      "ad_no"
+    ],
+    "key_missing": [],
+    "filled_count": 10,
+    "of": 12
+  },
+  "status_under_5a": "auto_verified",
+  "status_reason": "all key fields quoted, parse + sanity checks pass"
+}

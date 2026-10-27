@@ -1,0 +1,132 @@
+{
+  "fixture_id": "pts_2",
+  "source_name": "PTS",
+  "source_url": "https://pts.org.pk/Projects/",
+  "original_doc_url": "https://pts.org.pk/Documents/373/572 Advertisement English 18.08.2026.jpeg",
+  "fetched_at": "2026-10-23T11:43:04+00:00",
+  "method": "JSON list + OCR (ad + corrigendum images)",
+  "currently_open_at_fetch": false,
+  "extracted_by": "manual extraction by Claude in Phase 0 (not the production Gemini extractor)",
+  "raw_files": [
+    "raw/pts_projects.json",
+    "raw/pts_373_ad.ocr.txt",
+    "raw/pts_373_corr.ocr.txt"
+  ],
+  "raw_sha256": {
+    "raw/pts_projects.json": "5965b375d530837a2128ab4287ab2878fa2919b05bbfee84bb2e432c423bcb67"
+  },
+  "fields": {
+    "org": {
+      "value": "Sindh Prisons & Corrections Service (Inspectorate General)",
+      "quote": "INSPECTORATE GENERAL SINDH PRISONS & CORRECTIONS SERVICE",
+      "from": "raw/pts_373_corr.ocr.txt"
+    },
+    "post_title": {
+      "value": "Head Wireless Operator",
+      "quote": "Head Wireless Operator (BS-09)",
+      "from": "raw/pts_373_corr.ocr.txt",
+      "note": "ad scan OCR is badly garbled ('Heed Wireiess Operator (BSC9)'); title taken from the clean corrigendum"
+    },
+    "bps": {
+      "value": "BS-09",
+      "quote": "Head Wireless Operator (BS-09)",
+      "from": "raw/pts_373_corr.ocr.txt"
+    },
+    "vacancies": {
+      "value": null,
+      "quote": null
+    },
+    "age_limit": {
+      "value": null,
+      "quote": null,
+      "note": "ad OCR shows 'Min 18 Max 23' but the table is garbled; not tied to this post"
+    },
+    "qualification": {
+      "value": null,
+      "quote": null,
+      "note": "ad OCR garbled ('Interedute at kast \"C* Grode')"
+    },
+    "domicile_quota": {
+      "value": null,
+      "quote": null,
+      "note": "ad OCR garbled ('domale of Sai Prounge')"
+    },
+    "gender": {
+      "value": null,
+      "quote": null
+    },
+    "experience": {
+      "value": null,
+      "quote": null
+    },
+    "test_service": {
+      "value": "PTS",
+      "quote": "Pakistan Testing Service",
+      "from": "raw/pts_373_corr.ocr.txt"
+    },
+    "last_date": {
+      "value": "2026-09-25",
+      "quote": "Online Application & Challan Form Submission extended upto 25.09.2026",
+      "from": "raw/pts_373_corr.ocr.txt"
+    },
+    "ad_no": {
+      "value": "No. Human Resource (HR)/19686; PTS project 572",
+      "quote": "No. Human Resource (HR)/ 19686",
+      "from": "raw/pts_373_ad.ocr.txt"
+    }
+  },
+  "note": "Listed on PTS with lastDate '......'; the corrigendum's extended deadline (25.09.2026) has passed.",
+  "checks": {
+    "quote_back": {
+      "org": true,
+      "post_title": true,
+      "bps": true,
+      "test_service": true,
+      "last_date": true,
+      "ad_no": true
+    },
+    "parse_check": {
+      "last_date": true,
+      "bps": true
+    },
+    "sanity": {
+      "last_date_not_past": false,
+      "bps_known_scale": true
+    },
+    "ocr_only_fields": [
+      "org",
+      "post_title",
+      "bps",
+      "test_service",
+      "last_date",
+      "ad_no"
+    ],
+    "conflicts": []
+  },
+  "completeness": {
+    "filled": [
+      "org",
+      "post_title",
+      "bps",
+      "test_service",
+      "last_date",
+      "ad_no"
+    ],
+    "missing": [
+      "vacancies",
+      "age_limit",
+      "qualification",
+      "domicile_quota",
+      "gender",
+      "experience"
+    ],
+    "key_missing": [
+      "age_limit",
+      "qualification"
+    ],
+    "filled_count": 6,
+    "of": 12
+  },
+  "status_under_5a": "closed",
+  "status_reason": "closing date before fetch date (listing still shows it)"
+}

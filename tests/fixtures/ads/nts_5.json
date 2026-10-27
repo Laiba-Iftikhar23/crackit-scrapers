@@ -1,0 +1,175 @@
+{
+  "fixture_id": "nts_5",
+  "source_name": "NTS",
+  "source_url": "https://portal.nts.org.pk/Alldetail/MTAxMzcy",
+  "original_doc_url": "https://portal.nts.org.pk/uploads/projects/1792059002_advertisement.pdf",
+  "fetched_at": "2026-10-23T11:45:17+00:00",
+  "method": "fetch (HTML) + OCR (scanned ad)",
+  "currently_open_at_fetch": true,
+  "extracted_by": "manual extraction by Claude in Phase 0 (not the production Gemini extractor)",
+  "raw_files": [
+    "raw/nts_cpwb.html",
+    "raw/nts_cpwb_ad.ocr.txt"
+  ],
+  "raw_sha256": {
+    "raw/nts_cpwb.html": "442ad0f6b4fd66898610ec113a63b7aac139d87b35e1729b6ca31e002d87f99a"
+  },
+  "fields": {
+    "org": {
+      "value": "Child Protection & Welfare Bureau, Punjab (Home Department)",
+      "quote": "Child Protection & Welfare Bureau, Punjab Angoori Bagh Scheme",
+      "from": "raw/nts_cpwb_ad.ocr.txt",
+      "also_from": [
+        {
+          "quote": "Child Protection Welfare Bureau Last Application Date",
+          "from": "raw/nts_cpwb.html"
+        }
+      ]
+    },
+    "post_title": {
+      "value": "Child Attendant",
+      "quote": "Post Name: Child Attendant (Online)",
+      "from": "raw/nts_cpwb.html"
+    },
+    "bps": {
+      "value": null,
+      "quote": null,
+      "note": "lump-sum pay package; no scale stated (ad: 'on Lumpsum Pay Package basis')"
+    },
+    "vacancies": {
+      "value": null,
+      "quote": null,
+      "note": "sources disagree",
+      "conflict": [
+        {
+          "value": 127,
+          "quote": "Post Name: Child Attendant (Online) Apply Now Total Post: 127",
+          "from": "raw/nts_cpwb.html"
+        },
+        {
+          "value": 104,
+          "quote": [
+            "Male 26",
+            "Female 78"
+          ],
+          "from": "raw/nts_cpwb_ad.ocr.txt",
+          "note": "ad table: 26 male + 78 female"
+        }
+      ]
+    },
+    "age_limit": {
+      "value": null,
+      "quote": null,
+      "note": "sources disagree",
+      "conflict": [
+        {
+          "value": "25-37",
+          "quote": "Total Post: 127 Fee: 550 + 10 Service charges Age Limit: 25 - 37 Years",
+          "from": "raw/nts_cpwb.html"
+        },
+        {
+          "value": "25-32",
+          "quote": "2532",
+          "from": "raw/nts_cpwb_ad.ocr.txt",
+          "note": "OCR merged '25 32'"
+        }
+      ]
+    },
+    "qualification": {
+      "value": "Secondary School Certificate (2nd Division)",
+      "quote": "Certificate (2nd Division) from a recognized Board.",
+      "from": "raw/nts_cpwb_ad.ocr.txt"
+    },
+    "domicile_quota": {
+      "value": "Punjab nationals; Open Merit + Women/Minority/Special Person quotas",
+      "quote": "Pakistani nationals of Punjab province",
+      "from": "raw/nts_cpwb_ad.ocr.txt"
+    },
+    "gender": {
+      "value": "Male and Female (separate counts)",
+      "quote": "Male 26",
+      "from": "raw/nts_cpwb_ad.ocr.txt"
+    },
+    "experience": {
+      "value": null,
+      "quote": null
+    },
+    "test_service": {
+      "value": "NTS",
+      "quote": "Candidates are advised to apply online on NS website (www.nts.org.pk)",
+      "from": "raw/nts_cpwb_ad.ocr.txt"
+    },
+    "last_date": {
+      "value": "2026-10-31",
+      "quote": "Last Application Date: 2026-10-31",
+      "from": "raw/nts_cpwb.html",
+      "also_from": [
+        {
+          "quote": "The last date for submission of online applications is 31.10.2026.",
+          "from": "raw/nts_cpwb_ad.ocr.txt"
+        }
+      ]
+    },
+    "ad_no": {
+      "value": "NTS code 2610201",
+      "quote": "Code: 2610201",
+      "from": "raw/nts_cpwb.html"
+    }
+  },
+  "checks": {
+    "quote_back": {
+      "org": true,
+      "post_title": true,
+      "vacancies (conflicting values)": true,
+      "age_limit (conflicting values)": true,
+      "qualification": true,
+      "domicile_quota": true,
+      "gender": true,
+      "test_service": true,
+      "last_date": true,
+      "ad_no": true
+    },
+    "parse_check": {
+      "last_date": true
+    },
+    "sanity": {
+      "last_date_not_past": true
+    },
+    "ocr_only_fields": [
+      "qualification",
+      "domicile_quota",
+      "gender",
+      "test_service"
+    ],
+    "conflicts": [
+      "vacancies",
+      "age_limit"
+    ]
+  },
+  "completeness": {
+    "filled": [
+      "org",
+      "post_title",
+      "qualification",
+      "domicile_quota",
+      "gender",
+      "test_service",
+      "last_date",
+      "ad_no"
+    ],
+    "missing": [
+      "bps",
+      "vacancies",
+      "age_limit",
+      "experience"
+    ],
+    "key_missing": [
+      "bps",
+      "age_limit"
+    ],
+    "filled_count": 8,
+    "of": 12
+  },
+  "status_under_5a": "needs_confirmation",
+  "status_reason": "key fields missing: bps, age_limit; sources disagree on: vacancies, age_limit; OCR-only key fields without a second source: qualification"
+}

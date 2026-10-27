@@ -1,0 +1,140 @@
+{
+  "fixture_id": "pjobs_2",
+  "source_name": "Punjab Jobs",
+  "source_url": "https://jobs.punjab.gov.pk/new_recruit/job_detail/accounts-officer-23",
+  "original_doc_url": "https://jobs.punjab.gov.pk/PJP-Uploads/news_advertisements/1791548335_Advertisement.jpeg",
+  "fetched_at": "2026-10-23T11:44:46+00:00",
+  "method": "fetch (HTML) + OCR of ad image",
+  "currently_open_at_fetch": true,
+  "extracted_by": "manual extraction by Claude in Phase 0 (not the production Gemini extractor)",
+  "raw_files": [
+    "raw/pjobs_ao.html",
+    "raw/pjobs_ao_img.ocr.txt"
+  ],
+  "raw_sha256": {
+    "raw/pjobs_ao.html": "a3080f9b8e015e8b86e556f44341a8718369ac483a933aed078b658213ab47da"
+  },
+  "fields": {
+    "org": {
+      "value": "Department of Tourist Services (DTS), Tourism, Archaeology and Museums Department, Punjab",
+      "quote": "DEPARTMENT OF TOURIST SERVICES (DTS) TOURISM ARCHAEOLOGY AND MUSEUMS DEPARTMENT",
+      "from": "raw/pjobs_ao_img.ocr.txt"
+    },
+    "post_title": {
+      "value": "Accounts Officer",
+      "quote": "Accounts Officer Job Posted 09-10-2026",
+      "from": "raw/pjobs_ao.html"
+    },
+    "bps": {
+      "value": "N/A (contract, lump sum)",
+      "quote": "Level N/A",
+      "from": "raw/pjobs_ao.html"
+    },
+    "vacancies": {
+      "value": 1,
+      "quote": "01 (Open merit=01) 01 (Open merit=01)",
+      "from": "raw/pjobs_ao_img.ocr.txt",
+      "note": "OCR lost column order, but both Accounts Officer and Cashier rows show 01"
+    },
+    "age_limit": {
+      "value": {
+        "min": 25,
+        "max": 30
+      },
+      "quote": "Age 25 - 30",
+      "from": "raw/pjobs_ao.html"
+    },
+    "qualification": {
+      "value": "16 years education (2nd Division / 2.5 CGPA) in Accounts & Finance or related, HEC-recognized",
+      "quote": "16 years of Education (2 nd Division /2.5 CGPA) in Accounts & Finance and related discipline from a university recognized by the Higher Education Commission",
+      "from": "raw/pjobs_ao.html"
+    },
+    "domicile_quota": {
+      "value": "Punjab domicile; open merit",
+      "quote": "Domicile is required for this position.",
+      "from": "raw/pjobs_ao.html",
+      "also_from": [
+        {
+          "quote": "having domicile of Punjab",
+          "from": "raw/pjobs_ao_img.ocr.txt"
+        }
+      ]
+    },
+    "gender": {
+      "value": "Both",
+      "quote": "Gender Both",
+      "from": "raw/pjobs_ao.html"
+    },
+    "experience": {
+      "value": "2 years post-qualification",
+      "quote": "2 years' post-qualification experience in the relevant field",
+      "from": "raw/pjobs_ao.html"
+    },
+    "test_service": {
+      "value": null,
+      "quote": null
+    },
+    "last_date": {
+      "value": "2026-10-23",
+      "quote": "Last Date to Apply 23-10-2026",
+      "from": "raw/pjobs_ao.html"
+    },
+    "ad_no": {
+      "value": null,
+      "quote": null
+    }
+  },
+  "checks": {
+    "quote_back": {
+      "org": true,
+      "post_title": true,
+      "bps": true,
+      "vacancies": true,
+      "age_limit": true,
+      "qualification": true,
+      "domicile_quota": true,
+      "gender": true,
+      "experience": true,
+      "last_date": true
+    },
+    "parse_check": {
+      "last_date": true,
+      "bps": true,
+      "age_limit": true
+    },
+    "sanity": {
+      "last_date_not_past": true,
+      "bps_known_scale": true,
+      "age_range_ok": true,
+      "vacancies_positive_int": true
+    },
+    "ocr_only_fields": [
+      "org",
+      "vacancies"
+    ],
+    "conflicts": []
+  },
+  "completeness": {
+    "filled": [
+      "org",
+      "post_title",
+      "bps",
+      "vacancies",
+      "age_limit",
+      "qualification",
+      "domicile_quota",
+      "gender",
+      "experience",
+      "last_date"
+    ],
+    "missing": [
+      "test_service",
+      "ad_no"
+    ],
+    "key_missing": [],
+    "filled_count": 10,
+    "of": 12
+  },
+  "status_under_5a": "auto_verified",
+  "status_reason": "all key fields quoted, parse + sanity checks pass"
+}

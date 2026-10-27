@@ -1,0 +1,121 @@
+{
+  "fixture_id": "njp_4",
+  "source_name": "NJP",
+  "source_url": "https://njp.gov.pk/jobs/9818",
+  "original_doc_url": "https://njp.gov.pk/jobs/9818",
+  "fetched_at": "2026-10-24T08:52:34+00:00",
+  "method": "fetch (HTML)",
+  "currently_open_at_fetch": true,
+  "extracted_by": "manual extraction by Claude in Phase 0 (not the production Gemini extractor)",
+  "raw_files": [
+    "raw/njp_9818.html"
+  ],
+  "raw_sha256": {
+    "raw/njp_9818.html": "1721cbf0c4a578e7d5fde6f0b6f52b2e9fcda7c14ee5b279a637baaa868865cf"
+  },
+  "fields": {
+    "org": {
+      "value": "Capital Development Authority (CDA), via Ministry of Interior and Narcotics Control",
+      "quote": "Member (Finance) at CDA Ministry of Interior and Narcotics Control",
+      "from": "raw/njp_9818.html"
+    },
+    "post_title": {
+      "value": "Financial Advisor / Member (Finance), CDA",
+      "quote": "Job Opportunity for Financial Advisor / Member (Finance) at CDA",
+      "from": "raw/njp_9818.html"
+    },
+    "bps": {
+      "value": "BPS-20",
+      "quote": "Grade BPS-20",
+      "from": "raw/njp_9818.html"
+    },
+    "vacancies": {
+      "value": 1,
+      "quote": "Vacancies 1 vacancy",
+      "from": "raw/njp_9818.html"
+    },
+    "age_limit": {
+      "value": null,
+      "quote": null,
+      "note": "no age limit on the NJP page"
+    },
+    "qualification": {
+      "value": "1st class Master's in Economics / B.Sc. Hons Economics / MBA Finance / B.Sc. or M.Sc. Accounting",
+      "quote": "Minimum of 1st Class Master's degree in M.Sc. Economics/ B.Sc. Hons. (Economics), or MBA(Finance)",
+      "from": "raw/njp_9818.html"
+    },
+    "domicile_quota": {
+      "value": null,
+      "quote": null
+    },
+    "gender": {
+      "value": null,
+      "quote": null
+    },
+    "experience": {
+      "value": "12 years",
+      "quote": "Experience 12 Years",
+      "from": "raw/njp_9818.html"
+    },
+    "test_service": {
+      "value": null,
+      "quote": null
+    },
+    "last_date": {
+      "value": "2026-10-25",
+      "quote": "Application Deadline 25 Oct 2026",
+      "from": "raw/njp_9818.html"
+    },
+    "ad_no": {
+      "value": null,
+      "quote": null
+    }
+  },
+  "checks": {
+    "quote_back": {
+      "org": true,
+      "post_title": true,
+      "bps": true,
+      "vacancies": true,
+      "qualification": true,
+      "experience": true,
+      "last_date": true
+    },
+    "parse_check": {
+      "last_date": true,
+      "bps": true
+    },
+    "sanity": {
+      "last_date_not_past": true,
+      "bps_known_scale": true,
+      "vacancies_positive_int": true
+    },
+    "ocr_only_fields": [],
+    "conflicts": []
+  },
+  "completeness": {
+    "filled": [
+      "org",
+      "post_title",
+      "bps",
+      "vacancies",
+      "qualification",
+      "experience",
+      "last_date"
+    ],
+    "missing": [
+      "age_limit",
+      "domicile_quota",
+      "gender",
+      "test_service",
+      "ad_no"
+    ],
+    "key_missing": [
+      "age_limit"
+    ],
+    "filled_count": 7,
+    "of": 12
+  },
+  "status_under_5a": "needs_confirmation",
+  "status_reason": "key fields missing: age_limit"
+}

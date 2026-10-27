@@ -1,0 +1,133 @@
+{
+  "fixture_id": "army_2",
+  "source_name": "Join Pak Army",
+  "source_url": "https://joinpakarmy.gov.pk/course/?com_type=sldr_recruitment",
+  "original_doc_url": "https://joinpakarmy.gov.pk/course/?com_type=sldr_recruitment",
+  "fetched_at": "2026-10-24T08:43:00+00:00",
+  "method": "headless render (JSON /api/course_list/ corroborates)",
+  "currently_open_at_fetch": true,
+  "extracted_by": "manual extraction by Claude in Phase 0 (not the production Gemini extractor)",
+  "raw_files": [
+    "render_army/10_https_joinpakarmy_gov_pk_course_com_type.txt",
+    "render_army/08_https_joinpakarmy_gov_pk_.txt",
+    "raw/army_courses.json"
+  ],
+  "raw_sha256": {
+    "raw/army_courses.json": "b5a7f271f83ed7b11032cc0cb89e6923453059757af0e512c5431f7cf79e2508"
+  },
+  "fields": {
+    "org": {
+      "value": "Pakistan Army (GHQ)",
+      "quote": "Pakistan Army General Headquarters (GHQ) Rawalpindi",
+      "from": "render_army/10_https_joinpakarmy_gov_pk_course_com_type.txt"
+    },
+    "post_title": {
+      "value": "Recruitment as a Soldier (and JCO Naib Khateeb)",
+      "quote": "Recruitment as a Soldier",
+      "from": "render_army/08_https_joinpakarmy_gov_pk_.txt"
+    },
+    "bps": {
+      "value": null,
+      "quote": null
+    },
+    "vacancies": {
+      "value": null,
+      "quote": null
+    },
+    "age_limit": {
+      "value": {
+        "min": 17.5,
+        "max": 23
+      },
+      "quote": "AGE 17.5-23 Years as on Nov 24, 2026",
+      "from": "render_army/10_https_joinpakarmy_gov_pk_course_com_type.txt",
+      "also_from": [
+        {
+          "quote": "\"age_cutoff\":\"2026-11-24\"",
+          "from": "raw/army_courses.json"
+        }
+      ]
+    },
+    "qualification": {
+      "value": null,
+      "quote": null,
+      "note": "not on the rendered page (Urdu sections list trades, not education)"
+    },
+    "domicile_quota": {
+      "value": null,
+      "quote": null
+    },
+    "gender": {
+      "value": "Male",
+      "quote": "GENDER Male",
+      "from": "render_army/10_https_joinpakarmy_gov_pk_course_com_type.txt"
+    },
+    "experience": {
+      "value": null,
+      "quote": null
+    },
+    "test_service": {
+      "value": null,
+      "quote": null
+    },
+    "last_date": {
+      "value": "2026-11-23",
+      "quote": "Registration open till 23 Nov 2026",
+      "from": "render_army/08_https_joinpakarmy_gov_pk_.txt",
+      "also_from": [
+        {
+          "quote": "\"registration_end_date\":\"2026-11-23\"",
+          "from": "raw/army_courses.json"
+        }
+      ]
+    },
+    "ad_no": {
+      "value": null,
+      "quote": null
+    }
+  },
+  "checks": {
+    "quote_back": {
+      "org": true,
+      "post_title": true,
+      "age_limit": true,
+      "gender": true,
+      "last_date": true
+    },
+    "parse_check": {
+      "last_date": true,
+      "age_limit": true
+    },
+    "sanity": {
+      "last_date_not_past": true,
+      "age_range_ok": true
+    },
+    "ocr_only_fields": [],
+    "conflicts": []
+  },
+  "completeness": {
+    "filled": [
+      "org",
+      "post_title",
+      "age_limit",
+      "gender",
+      "last_date"
+    ],
+    "missing": [
+      "bps",
+      "vacancies",
+      "qualification",
+      "domicile_quota",
+      "experience",
+      "test_service",
+      "ad_no"
+    ],
+    "key_missing": [
+      "qualification"
+    ],
+    "filled_count": 5,
+    "of": 12
+  },
+  "status_under_5a": "needs_confirmation",
+  "status_reason": "key fields missing: qualification"
+}

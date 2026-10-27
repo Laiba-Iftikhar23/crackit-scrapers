@@ -1,0 +1,116 @@
+{
+  "fixture_id": "ppsc_1",
+  "source_name": "PPSC",
+  "source_url": "https://ppsc.gop.pk/Jobs.aspx",
+  "original_doc_url": null,
+  "fetched_at": "2026-10-23T11:43:13+00:00",
+  "method": "fetch (HTML listing only; ad PDFs disallowed by robots.txt)",
+  "currently_open_at_fetch": true,
+  "extracted_by": "manual extraction by Claude in Phase 0 (not the production Gemini extractor)",
+  "raw_files": [
+    "raw/ppsc_jobs.html"
+  ],
+  "raw_sha256": {
+    "raw/ppsc_jobs.html": "bbfa49e9a8783f76fb273ed53d9e7b8fb95ef70719527edab31c6cdccb273011"
+  },
+  "fields": {
+    "org": {
+      "value": "Punjab Housing and Town Planning Agency (PHATA), HUD & PHE Department (via PPSC)",
+      "quote": "25A2026 DEPUTY DIRECTOR (T.P) 600 HOUSING URBAN DEVELOPMENT & PUBLIC HEALTH ENGINEERING DEPARTMENT PUNJAB HOUSING AND TOWN PLANNING AGENCY (PHATA) 09-10-2026 26-10-2026",
+      "from": "raw/ppsc_jobs.html"
+    },
+    "post_title": {
+      "value": "Deputy Director (T.P)",
+      "quote": "25A2026 DEPUTY DIRECTOR (T.P) 600 HOUSING URBAN DEVELOPMENT & PUBLIC HEALTH ENGINEERING DEPARTMENT PUNJAB HOUSING AND TOWN PLANNING AGENCY (PHATA) 09-10-2026 26-10-2026",
+      "from": "raw/ppsc_jobs.html"
+    },
+    "bps": {
+      "value": null,
+      "quote": null,
+      "note": "only in the ad PDF (robots: Disallow /*.pdf$)"
+    },
+    "vacancies": {
+      "value": null,
+      "quote": null
+    },
+    "age_limit": {
+      "value": null,
+      "quote": null,
+      "note": "only in the ad PDF"
+    },
+    "qualification": {
+      "value": null,
+      "quote": null,
+      "note": "only in the ad PDF"
+    },
+    "domicile_quota": {
+      "value": null,
+      "quote": null
+    },
+    "gender": {
+      "value": null,
+      "quote": null
+    },
+    "experience": {
+      "value": null,
+      "quote": null
+    },
+    "test_service": {
+      "value": null,
+      "quote": null
+    },
+    "last_date": {
+      "value": "2026-10-26",
+      "quote": "25A2026 DEPUTY DIRECTOR (T.P) 600 HOUSING URBAN DEVELOPMENT & PUBLIC HEALTH ENGINEERING DEPARTMENT PUNJAB HOUSING AND TOWN PLANNING AGENCY (PHATA) 09-10-2026 26-10-2026",
+      "from": "raw/ppsc_jobs.html"
+    },
+    "ad_no": {
+      "value": "Advt 11/2026, case 25A2026",
+      "quote": "25A2026 DEPUTY DIRECTOR (T.P) 600 HOUSING URBAN DEVELOPMENT & PUBLIC HEALTH ENGINEERING DEPARTMENT PUNJAB HOUSING AND TOWN PLANNING AGENCY (PHATA) 09-10-2026 26-10-2026",
+      "from": "raw/ppsc_jobs.html"
+    }
+  },
+  "checks": {
+    "quote_back": {
+      "org": true,
+      "post_title": true,
+      "last_date": true,
+      "ad_no": true
+    },
+    "parse_check": {
+      "last_date": true
+    },
+    "sanity": {
+      "last_date_not_past": true
+    },
+    "ocr_only_fields": [],
+    "conflicts": []
+  },
+  "completeness": {
+    "filled": [
+      "org",
+      "post_title",
+      "last_date",
+      "ad_no"
+    ],
+    "missing": [
+      "bps",
+      "vacancies",
+      "age_limit",
+      "qualification",
+      "domicile_quota",
+      "gender",
+      "experience",
+      "test_service"
+    ],
+    "key_missing": [
+      "bps",
+      "age_limit",
+      "qualification"
+    ],
+    "filled_count": 4,
+    "of": 12
+  },
+  "status_under_5a": "needs_upload",
+  "status_reason": "details only in bot-blocked docs; missing bps, age_limit, qualification"
+}

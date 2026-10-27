@@ -1,0 +1,129 @@
+{
+  "fixture_id": "njp_3",
+  "source_name": "NJP",
+  "source_url": "https://njp.gov.pk/jobs/9829",
+  "original_doc_url": "https://njp.gov.pk/jobs/9829",
+  "fetched_at": "2026-10-23T11:44:36+00:00",
+  "method": "fetch (HTML)",
+  "currently_open_at_fetch": true,
+  "extracted_by": "manual extraction by Claude in Phase 0 (not the production Gemini extractor)",
+  "raw_files": [
+    "raw/njp_9829.html"
+  ],
+  "raw_sha256": {
+    "raw/njp_9829.html": "1c8a7a3f6900af7da3d4b8677b52ffff81598a5fd32779d3b84303ae6b255d73"
+  },
+  "fields": {
+    "org": {
+      "value": "Ministry of Federal Education and Professional Training",
+      "quote": "Pakistan Institute of Education Ministry of Federal Education and Professional Training",
+      "from": "raw/njp_9829.html"
+    },
+    "post_title": {
+      "value": "Director General, Pakistan Institute of Education",
+      "quote": "Director General (MP-I), Pakistan Institute of Education",
+      "from": "raw/njp_9829.html"
+    },
+    "bps": {
+      "value": "MP-I",
+      "quote": "Grade MP-I",
+      "from": "raw/njp_9829.html"
+    },
+    "vacancies": {
+      "value": 1,
+      "quote": "Number of posts: 01",
+      "from": "raw/njp_9829.html"
+    },
+    "age_limit": {
+      "value": {
+        "min": null,
+        "max": 62
+      },
+      "quote": "Age Limit Max: 62 years",
+      "from": "raw/njp_9829.html"
+    },
+    "qualification": {
+      "value": "PhD or Master's in Social Sciences / Management / Public Policy / Administrative Sciences or Numerical / Mathematical Sciences with Data Science",
+      "quote": "Ph.D in Social Sciences/Management/Public Policy/ Administrative Sciences or Numerical / Mathematical Sciences with Data Science from a recognized national/international university OR Master's degree",
+      "from": "raw/njp_9829.html"
+    },
+    "domicile_quota": {
+      "value": "Merit",
+      "quote": "Domicile Quota: Merit",
+      "from": "raw/njp_9829.html"
+    },
+    "gender": {
+      "value": "Male / Female",
+      "quote": "Gender: Male / Female",
+      "from": "raw/njp_9829.html"
+    },
+    "experience": {
+      "value": "7 years (PhD) or 9 years (Master's)",
+      "quote": "07 years professional experience for candidates with a Ph.D or 09 years professional experience for candidates with a Master's degree",
+      "from": "raw/njp_9829.html"
+    },
+    "test_service": {
+      "value": null,
+      "quote": null
+    },
+    "last_date": {
+      "value": "2026-10-27",
+      "quote": "Application Deadline 27 Oct 2026",
+      "from": "raw/njp_9829.html"
+    },
+    "ad_no": {
+      "value": null,
+      "quote": null
+    }
+  },
+  "checks": {
+    "quote_back": {
+      "org": true,
+      "post_title": true,
+      "bps": true,
+      "vacancies": true,
+      "age_limit": true,
+      "qualification": true,
+      "domicile_quota": true,
+      "gender": true,
+      "experience": true,
+      "last_date": true
+    },
+    "parse_check": {
+      "last_date": true,
+      "bps": true,
+      "age_limit": true
+    },
+    "sanity": {
+      "last_date_not_past": true,
+      "bps_known_scale": true,
+      "age_range_ok": true,
+      "vacancies_positive_int": true
+    },
+    "ocr_only_fields": [],
+    "conflicts": []
+  },
+  "completeness": {
+    "filled": [
+      "org",
+      "post_title",
+      "bps",
+      "vacancies",
+      "age_limit",
+      "qualification",
+      "domicile_quota",
+      "gender",
+      "experience",
+      "last_date"
+    ],
+    "missing": [
+      "test_service",
+      "ad_no"
+    ],
+    "key_missing": [],
+    "filled_count": 10,
+    "of": 12
+  },
+  "status_under_5a": "auto_verified",
+  "status_reason": "all key fields quoted, parse + sanity checks pass"
+}

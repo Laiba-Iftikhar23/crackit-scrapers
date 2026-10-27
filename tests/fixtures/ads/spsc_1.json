@@ -1,0 +1,135 @@
+{
+  "fixture_id": "spsc_1",
+  "source_name": "SPSC",
+  "source_url": "https://spsc.gov.pk/advertisement.php",
+  "original_doc_url": "https://spsc.gov.pk/advertisement/2026/adv-05-2026.pdf",
+  "fetched_at": "2026-10-23T11:46:10+00:00",
+  "method": "fetch (PDF, scanned) + OCR",
+  "currently_open_at_fetch": true,
+  "extracted_by": "manual extraction by Claude in Phase 0 (not the production Gemini extractor)",
+  "raw_files": [
+    "raw/spsc_adv05.ocr.txt"
+  ],
+  "raw_sha256": {},
+  "fields": {
+    "org": {
+      "value": "Sindh Public Service Commission",
+      "quote": "SINDH PUBLIC SERVICE COMMISSION THANDI SARAK, HYDERABAD CONSOLIDATED ADVERTISEMENT NO. 05/2026",
+      "from": "raw/spsc_adv05.ocr.txt"
+    },
+    "post_title": {
+      "value": "Deputy Director (I.T) / Senior Manager I.T, Enquiries & Anti-Corruption Establishment",
+      "quote": "Deputy Director (I.T)",
+      "from": "raw/spsc_adv05.ocr.txt"
+    },
+    "bps": {
+      "value": "BPS-18",
+      "quote": "(BPS-18)",
+      "from": "raw/spsc_adv05.ocr.txt"
+    },
+    "vacancies": {
+      "value": null,
+      "quote": null
+    },
+    "age_limit": {
+      "value": null,
+      "quote": null,
+      "note": "age values appear in the OCR text (28-35, 21-28, 18-30, 21-31) but the scanned table's column order is lost, so they can't be tied to this post; not guessed"
+    },
+    "qualification": {
+      "value": "Bachelor in IT or Computer Science (16 years), at least 2nd Division or equivalent CGPA, HEC-recognized",
+      "quote": [
+        "Bachelor in Information",
+        "Science (Sixteen Years Education) at least in second Division or equivalent CGPA from a HEC recognized"
+      ],
+      "from": "raw/spsc_adv05.ocr.txt"
+    },
+    "domicile_quota": {
+      "value": "Open Merit (Rural/Urban split in table)",
+      "quote": "Open Merit",
+      "from": "raw/spsc_adv05.ocr.txt"
+    },
+    "gender": {
+      "value": "Male / Female",
+      "quote": "Male / Female",
+      "from": "raw/spsc_adv05.ocr.txt"
+    },
+    "experience": {
+      "value": "5 years relevant (IT projects)",
+      "quote": "Five (05) years of experience in a relevant field",
+      "from": "raw/spsc_adv05.ocr.txt"
+    },
+    "test_service": {
+      "value": null,
+      "quote": null
+    },
+    "last_date": {
+      "value": "2026-10-23",
+      "quote": "CLOSING DATE: 23.10.2026",
+      "from": "raw/spsc_adv05.ocr.txt"
+    },
+    "ad_no": {
+      "value": "05/2026",
+      "quote": "CONSOLIDATED ADVERTISEMENT NO. 05/2026 DATED: 25.09.2026",
+      "from": "raw/spsc_adv05.ocr.txt"
+    }
+  },
+  "checks": {
+    "quote_back": {
+      "org": true,
+      "post_title": true,
+      "bps": true,
+      "qualification": true,
+      "domicile_quota": true,
+      "gender": true,
+      "experience": true,
+      "last_date": true,
+      "ad_no": true
+    },
+    "parse_check": {
+      "last_date": true,
+      "bps": true
+    },
+    "sanity": {
+      "last_date_not_past": true,
+      "bps_known_scale": true
+    },
+    "ocr_only_fields": [
+      "org",
+      "post_title",
+      "bps",
+      "qualification",
+      "domicile_quota",
+      "gender",
+      "experience",
+      "last_date",
+      "ad_no"
+    ],
+    "conflicts": []
+  },
+  "completeness": {
+    "filled": [
+      "org",
+      "post_title",
+      "bps",
+      "qualification",
+      "domicile_quota",
+      "gender",
+      "experience",
+      "last_date",
+      "ad_no"
+    ],
+    "missing": [
+      "vacancies",
+      "age_limit",
+      "test_service"
+    ],
+    "key_missing": [
+      "age_limit"
+    ],
+    "filled_count": 9,
+    "of": 12
+  },
+  "status_under_5a": "needs_confirmation",
+  "status_reason": "key fields missing: age_limit; OCR-only key fields without a second source: post_title, bps, qualification, last_date"
+}

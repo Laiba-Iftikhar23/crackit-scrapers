@@ -1,0 +1,29 @@
+# Raw official documents, OCR output, spike downloads: never commit or re-host
+spikes/data/
+docs/sources/
+
+# Env & secrets
+.env*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Playwright / test output
+playwright-report/
+test-results/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json

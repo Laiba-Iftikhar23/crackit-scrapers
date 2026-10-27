@@ -1,0 +1,140 @@
+{
+  "fixture_id": "pts_1",
+  "source_name": "PTS",
+  "source_url": "https://pts.org.pk/Projects/",
+  "original_doc_url": "https://pts.org.pk/Documents/367/Advertisement (U).pdf",
+  "fetched_at": "2026-10-23T11:43:04+00:00",
+  "method": "JSON list + PDF text + OCR (addendum)",
+  "currently_open_at_fetch": false,
+  "extracted_by": "manual extraction by Claude in Phase 0 (not the production Gemini extractor)",
+  "raw_files": [
+    "raw/pts_projects.json",
+    "raw/pts_367_ad.pdf",
+    "raw/pts_367_addendum.ocr.txt"
+  ],
+  "raw_sha256": {
+    "raw/pts_projects.json": "5965b375d530837a2128ab4287ab2878fa2919b05bbfee84bb2e432c423bcb67",
+    "raw/pts_367_ad.pdf": "5aecbb586aef6409ed3412d056436b4ca08c4fcf126008569d516ea86386b512"
+  },
+  "fields": {
+    "org": {
+      "value": "Provincial Assembly of Sindh",
+      "quote": "Provincial Assembly of Sindh (PAS) (565)",
+      "from": "raw/pts_projects.json"
+    },
+    "post_title": {
+      "value": "Assistant Programmer",
+      "quote": "1. Assistant Programmer",
+      "from": "raw/pts_367_ad.pdf"
+    },
+    "bps": {
+      "value": "BPS-15",
+      "quote": "(BPS-15)",
+      "from": "raw/pts_367_ad.pdf"
+    },
+    "vacancies": {
+      "value": 1,
+      "quote": "CSE with 01 18-33 (BPS-15)",
+      "from": "raw/pts_367_ad.pdf"
+    },
+    "age_limit": {
+      "value": {
+        "min": 18,
+        "max": 33
+      },
+      "quote": "CSE with 01 18-33 (BPS-15)",
+      "from": "raw/pts_367_ad.pdf",
+      "note": "addendum adds up to 5 years general relaxation"
+    },
+    "qualification": {
+      "value": "Bachelors in CS / IT / CSE, 2nd division, HEC-recognized",
+      "quote": [
+        "Bachelors in computer science / I.T, CSE with",
+        "2nd division from a University recognized by HEC or equivalent."
+      ],
+      "from": "raw/pts_367_ad.pdf"
+    },
+    "domicile_quota": {
+      "value": "Sindh domicile",
+      "quote": "having domicile of Sindh Province",
+      "from": "raw/pts_367_ad.pdf"
+    },
+    "gender": {
+      "value": null,
+      "quote": null
+    },
+    "experience": {
+      "value": null,
+      "quote": null
+    },
+    "test_service": {
+      "value": "PTS",
+      "quote": "Pakistan Testing Service",
+      "from": "raw/pts_367_ad.pdf"
+    },
+    "last_date": {
+      "value": "2025-07-22",
+      "quote": "extended deadline up to 22-07-2025",
+      "from": "raw/pts_367_addendum.ocr.txt",
+      "note": "ad PDF has no date; JSON lastDate is '......'; the only date found is in the 2025 addendum"
+    },
+    "ad_no": {
+      "value": "PTS project 565",
+      "quote": "Provincial Assembly of Sindh (PAS) (565)",
+      "from": "raw/pts_projects.json"
+    }
+  },
+  "note": "Still listed under PTS 'All Projects' in Oct 2026, but the newest deadline found is 22-07-2025.",
+  "checks": {
+    "quote_back": {
+      "org": true,
+      "post_title": true,
+      "bps": true,
+      "vacancies": true,
+      "age_limit": true,
+      "qualification": true,
+      "domicile_quota": true,
+      "test_service": true,
+      "last_date": true,
+      "ad_no": true
+    },
+    "parse_check": {
+      "last_date": true,
+      "bps": true,
+      "age_limit": true
+    },
+    "sanity": {
+      "last_date_not_past": false,
+      "bps_known_scale": true,
+      "age_range_ok": true,
+      "vacancies_positive_int": true
+    },
+    "ocr_only_fields": [
+      "last_date"
+    ],
+    "conflicts": []
+  },
+  "completeness": {
+    "filled": [
+      "org",
+      "post_title",
+      "bps",
+      "vacancies",
+      "age_limit",
+      "qualification",
+      "domicile_quota",
+      "test_service",
+      "last_date",
+      "ad_no"
+    ],
+    "missing": [
+      "gender",
+      "experience"
+    ],
+    "key_missing": [],
+    "filled_count": 10,
+    "of": 12
+  },
+  "status_under_5a": "closed",
+  "status_reason": "closing date before fetch date (listing still shows it)"
+}

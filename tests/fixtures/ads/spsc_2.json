@@ -1,0 +1,134 @@
+{
+  "fixture_id": "spsc_2",
+  "source_name": "SPSC",
+  "source_url": "https://spsc.gov.pk/advertisement.php",
+  "original_doc_url": "https://spsc.gov.pk/advertisement/2026/adv-05-2026.pdf",
+  "fetched_at": "2026-10-23T11:46:10+00:00",
+  "method": "fetch (PDF, scanned) + OCR",
+  "currently_open_at_fetch": true,
+  "extracted_by": "manual extraction by Claude in Phase 0 (not the production Gemini extractor)",
+  "raw_files": [
+    "raw/spsc_adv05.ocr.txt"
+  ],
+  "raw_sha256": {},
+  "fields": {
+    "org": {
+      "value": "Sindh Public Service Commission",
+      "quote": "SINDH PUBLIC SERVICE COMMISSION THANDI SARAK, HYDERABAD CONSOLIDATED ADVERTISEMENT NO. 05/2026",
+      "from": "raw/spsc_adv05.ocr.txt"
+    },
+    "post_title": {
+      "value": "Assistant, Law, Parliamentary Affairs & Criminal Prosecution Department",
+      "quote": [
+        "LAW, PARLIAMENTARY AFFAIRS & CRIMINAL PROSECUTION DEPARTMENT",
+        "Assistant (BPS-16)"
+      ],
+      "from": "raw/spsc_adv05.ocr.txt"
+    },
+    "bps": {
+      "value": "BPS-16",
+      "quote": "Assistant (BPS-16)",
+      "from": "raw/spsc_adv05.ocr.txt"
+    },
+    "vacancies": {
+      "value": 10,
+      "quote": "Assistant (BPS-16) Graduate atleast in Second Division 10",
+      "from": "raw/spsc_adv05.ocr.txt",
+      "note": "OCR; number sits next to the post in the text but table layout is lost"
+    },
+    "age_limit": {
+      "value": null,
+      "quote": null,
+      "note": "age values appear in the OCR text (28-35, 21-28, 18-30, 21-31) but the scanned table's column order is lost, so they can't be tied to this post; not guessed"
+    },
+    "qualification": {
+      "value": "Graduate, at least 2nd Division, HEC-recognized university",
+      "quote": "Graduate atleast in Second Division 10 from a University recognized by the Higher Education Commission",
+      "from": "raw/spsc_adv05.ocr.txt"
+    },
+    "domicile_quota": {
+      "value": "Open Merit + Female Quota",
+      "quote": "Open Merit Male / Female Female Quota",
+      "from": "raw/spsc_adv05.ocr.txt"
+    },
+    "gender": {
+      "value": null,
+      "quote": null
+    },
+    "experience": {
+      "value": null,
+      "quote": null
+    },
+    "test_service": {
+      "value": null,
+      "quote": null
+    },
+    "last_date": {
+      "value": "2026-10-23",
+      "quote": "CLOSING DATE: 23.10.2026",
+      "from": "raw/spsc_adv05.ocr.txt"
+    },
+    "ad_no": {
+      "value": "05/2026",
+      "quote": "CONSOLIDATED ADVERTISEMENT NO. 05/2026 DATED: 25.09.2026",
+      "from": "raw/spsc_adv05.ocr.txt"
+    }
+  },
+  "checks": {
+    "quote_back": {
+      "org": true,
+      "post_title": true,
+      "bps": true,
+      "vacancies": true,
+      "qualification": true,
+      "domicile_quota": true,
+      "last_date": true,
+      "ad_no": true
+    },
+    "parse_check": {
+      "last_date": true,
+      "bps": true
+    },
+    "sanity": {
+      "last_date_not_past": true,
+      "bps_known_scale": true,
+      "vacancies_positive_int": true
+    },
+    "ocr_only_fields": [
+      "org",
+      "post_title",
+      "bps",
+      "vacancies",
+      "qualification",
+      "domicile_quota",
+      "last_date",
+      "ad_no"
+    ],
+    "conflicts": []
+  },
+  "completeness": {
+    "filled": [
+      "org",
+      "post_title",
+      "bps",
+      "vacancies",
+      "qualification",
+      "domicile_quota",
+      "last_date",
+      "ad_no"
+    ],
+    "missing": [
+      "age_limit",
+      "gender",
+      "experience",
+      "test_service"
+    ],
+    "key_missing": [
+      "age_limit"
+    ],
+    "filled_count": 8,
+    "of": 12
+  },
+  "status_under_5a": "needs_confirmation",
+  "status_reason": "key fields missing: age_limit; OCR-only key fields without a second source: post_title, bps, qualification, last_date"
+}

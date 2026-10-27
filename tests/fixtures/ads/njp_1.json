@@ -1,0 +1,126 @@
+{
+  "fixture_id": "njp_1",
+  "source_name": "NJP",
+  "source_url": "https://njp.gov.pk/jobs/9827",
+  "original_doc_url": "https://njp.gov.pk/jobs/9827",
+  "fetched_at": "2026-10-23T11:44:28+00:00",
+  "method": "fetch (HTML)",
+  "currently_open_at_fetch": true,
+  "extracted_by": "manual extraction by Claude in Phase 0 (not the production Gemini extractor)",
+  "raw_files": [
+    "raw/njp_9827.html"
+  ],
+  "raw_sha256": {
+    "raw/njp_9827.html": "ff84c1bbaa89f2a6ea124b872129ba4d50c48ae524e4cdf4fa34154230949c38"
+  },
+  "fields": {
+    "org": {
+      "value": "Ministry of Planning, Development & Special Initiatives",
+      "quote": "CHIEF STATISTICIAN (SPPS-II) Ministry of Planning, Development & Special Initiatives",
+      "from": "raw/njp_9827.html"
+    },
+    "post_title": {
+      "value": "Chief Statistician",
+      "quote": "Contract CHIEF STATISTICIAN (SPPS-II)",
+      "from": "raw/njp_9827.html"
+    },
+    "bps": {
+      "value": "SPPS-II",
+      "quote": "Grade SPPS-II",
+      "from": "raw/njp_9827.html"
+    },
+    "vacancies": {
+      "value": 1,
+      "quote": "Vacancies 1 vacancy",
+      "from": "raw/njp_9827.html"
+    },
+    "age_limit": {
+      "value": {
+        "min": null,
+        "max": 60
+      },
+      "quote": "Age Limit Max: 60 years",
+      "from": "raw/njp_9827.html"
+    },
+    "qualification": {
+      "value": "One of the listed postgraduate degrees (PGD/MSc/MA/MS/MPhil/PhD) in Economics, Statistics or related fields",
+      "quote": "Eligibility Criteria Qualifications PGD Applied Economics PGD Economics & Finance",
+      "from": "raw/njp_9827.html",
+      "note": "NJP lists ~70 accepted degrees; only the start is quoted"
+    },
+    "domicile_quota": {
+      "value": null,
+      "quote": null
+    },
+    "gender": {
+      "value": null,
+      "quote": null
+    },
+    "experience": {
+      "value": "20 years",
+      "quote": "Experience 20 Years",
+      "from": "raw/njp_9827.html"
+    },
+    "test_service": {
+      "value": null,
+      "quote": null
+    },
+    "last_date": {
+      "value": "2026-10-26",
+      "quote": "Application Deadline 26 Oct 2026",
+      "from": "raw/njp_9827.html"
+    },
+    "ad_no": {
+      "value": null,
+      "quote": null
+    }
+  },
+  "checks": {
+    "quote_back": {
+      "org": true,
+      "post_title": true,
+      "bps": true,
+      "vacancies": true,
+      "age_limit": true,
+      "qualification": true,
+      "experience": true,
+      "last_date": true
+    },
+    "parse_check": {
+      "last_date": true,
+      "bps": true,
+      "age_limit": true
+    },
+    "sanity": {
+      "last_date_not_past": true,
+      "bps_known_scale": true,
+      "age_range_ok": true,
+      "vacancies_positive_int": true
+    },
+    "ocr_only_fields": [],
+    "conflicts": []
+  },
+  "completeness": {
+    "filled": [
+      "org",
+      "post_title",
+      "bps",
+      "vacancies",
+      "age_limit",
+      "qualification",
+      "experience",
+      "last_date"
+    ],
+    "missing": [
+      "domicile_quota",
+      "gender",
+      "test_service",
+      "ad_no"
+    ],
+    "key_missing": [],
+    "filled_count": 8,
+    "of": 12
+  },
+  "status_under_5a": "auto_verified",
+  "status_reason": "all key fields quoted, parse + sanity checks pass"
+}

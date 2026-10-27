@@ -1,0 +1,169 @@
+{
+  "fixture_id": "nts_1",
+  "source_name": "NTS",
+  "source_url": "https://nts.org.pk/Test&Products/Announced/09_26/IRSA_Oct2026_Online/IRSA.php",
+  "original_doc_url": "https://nts.org.pk/Test&Products/Announced/09_26/IRSA_Oct2026_Online/IRSA_Ad.pdf",
+  "fetched_at": "2026-10-23T11:45:09+00:00",
+  "method": "fetch (HTML) + OCR (scanned ad) + PDF text (JD)",
+  "currently_open_at_fetch": true,
+  "extracted_by": "manual extraction by Claude in Phase 0 (not the production Gemini extractor)",
+  "raw_files": [
+    "raw/nts_irsa.html",
+    "raw/nts_irsa_ad.ocr.txt",
+    "raw/nts_irsa_jd.pdf"
+  ],
+  "raw_sha256": {
+    "raw/nts_irsa.html": "29f63db8ec9de43243f0448a14a14a41bfe6af2c4fcea8022a8336489d8aa185",
+    "raw/nts_irsa_jd.pdf": "90d24cb4f62abf292f4edd3fbf4384b64e1e0339b368c8353fb856ee72daa63b"
+  },
+  "fields": {
+    "org": {
+      "value": "Indus River System Authority (IRSA)",
+      "quote": "INDUS RIVER SYSTEM AUTHORITY GOVERNMENT OF PAKISTAN",
+      "from": "raw/nts_irsa_ad.ocr.txt",
+      "also_from": [
+        {
+          "quote": "Indus River System Authority (IRSA)",
+          "from": "raw/nts_irsa.html"
+        }
+      ]
+    },
+    "post_title": {
+      "value": "GIS/Web GIS Analyst (Telemetry Project)",
+      "quote": "GIS/Web GIS Analyst PPS-07 (Rs. 157,500) 1",
+      "from": "raw/nts_irsa_ad.ocr.txt",
+      "also_from": [
+        {
+          "quote": "GIS/Web GIS",
+          "from": "raw/nts_irsa_jd.pdf"
+        }
+      ]
+    },
+    "bps": {
+      "value": "PPS-07",
+      "quote": "GIS/Web GIS Analyst PPS-07 (Rs. 157,500)",
+      "from": "raw/nts_irsa_ad.ocr.txt",
+      "also_from": [
+        {
+          "quote": "Analyst - PPS-07",
+          "from": "raw/nts_irsa_jd.pdf"
+        }
+      ]
+    },
+    "vacancies": {
+      "value": 1,
+      "quote": "GIS/Web GIS Analyst PPS-07 (Rs. 157,500) 1",
+      "from": "raw/nts_irsa_ad.ocr.txt"
+    },
+    "age_limit": {
+      "value": {
+        "min": null,
+        "max": 30
+      },
+      "quote": "Age ≤ 30 years.",
+      "from": "raw/nts_irsa_jd.pdf",
+      "note": "JD PDF has a text layer but its columns are interleaved; every IRSA post lists Age ≤ 30"
+    },
+    "qualification": {
+      "value": "Min 2nd class M.Sc./Bachelor (16 years) in IT/GIS/Computer Science",
+      "quote": [
+        "Minimum 2nd class M.Sc./Bachelor Program (16",
+        "yrs of education) in IT/GIS/Computer Science."
+      ],
+      "from": "raw/nts_irsa_jd.pdf",
+      "note": "two fragments because the PDF's columns are interleaved"
+    },
+    "domicile_quota": {
+      "value": "Open merit",
+      "quote": "The post shall be filled on open Merit basis.",
+      "from": "raw/nts_irsa_ad.ocr.txt"
+    },
+    "gender": {
+      "value": null,
+      "quote": null
+    },
+    "experience": {
+      "value": "5+ years ESRI ArcMap/ArcCatalog",
+      "quote": "≥ 5 yrs hands-on experience in ESRI",
+      "from": "raw/nts_irsa_jd.pdf"
+    },
+    "test_service": {
+      "value": "NTS",
+      "quote": "may apply directly on NTS website: www.nts.org.pk",
+      "from": "raw/nts_irsa_ad.ocr.txt"
+    },
+    "last_date": {
+      "value": "2026-10-26",
+      "quote": "Last Date for Application Submission : 26th October 2026",
+      "from": "raw/nts_irsa.html",
+      "also_from": [
+        {
+          "quote": "The last date for submission of application is 26.10.2026.",
+          "from": "raw/nts_irsa_ad.ocr.txt"
+        }
+      ]
+    },
+    "ad_no": {
+      "value": "PID(I) 3326/26",
+      "quote": "PID(I) 3326 / 26",
+      "from": "raw/nts_irsa_ad.ocr.txt",
+      "note": "PID release no. printed on the ad scan"
+    }
+  },
+  "checks": {
+    "quote_back": {
+      "org": true,
+      "post_title": true,
+      "bps": true,
+      "vacancies": true,
+      "age_limit": true,
+      "qualification": true,
+      "domicile_quota": true,
+      "experience": true,
+      "test_service": true,
+      "last_date": true,
+      "ad_no": true
+    },
+    "parse_check": {
+      "last_date": true,
+      "bps": true,
+      "age_limit": true
+    },
+    "sanity": {
+      "last_date_not_past": true,
+      "bps_known_scale": true,
+      "age_range_ok": true,
+      "vacancies_positive_int": true
+    },
+    "ocr_only_fields": [
+      "vacancies",
+      "domicile_quota",
+      "test_service",
+      "ad_no"
+    ],
+    "conflicts": []
+  },
+  "completeness": {
+    "filled": [
+      "org",
+      "post_title",
+      "bps",
+      "vacancies",
+      "age_limit",
+      "qualification",
+      "domicile_quota",
+      "experience",
+      "test_service",
+      "last_date",
+      "ad_no"
+    ],
+    "missing": [
+      "gender"
+    ],
+    "key_missing": [],
+    "filled_count": 11,
+    "of": 12
+  },
+  "status_under_5a": "auto_verified",
+  "status_reason": "all key fields quoted, parse + sanity checks pass"
+}

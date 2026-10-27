@@ -1,0 +1,131 @@
+{
+  "fixture_id": "njp_2",
+  "source_name": "NJP",
+  "source_url": "https://njp.gov.pk/jobs/9820",
+  "original_doc_url": "https://njp.gov.pk/jobs/9820",
+  "fetched_at": "2026-10-23T11:44:32+00:00",
+  "method": "fetch (HTML)",
+  "currently_open_at_fetch": true,
+  "extracted_by": "manual extraction by Claude in Phase 0 (not the production Gemini extractor)",
+  "raw_files": [
+    "raw/njp_9820.html"
+  ],
+  "raw_sha256": {
+    "raw/njp_9820.html": "0bb0280f7fe37d042b597083fc061f627075dc53dfa66a28778671cb13275877"
+  },
+  "fields": {
+    "org": {
+      "value": "Pakistan Software Export Board (PSEB)",
+      "quote": "APM HR Skills (PPS-08) Pakistan Software Export Board (PSEB)",
+      "from": "raw/njp_9820.html"
+    },
+    "post_title": {
+      "value": "APM HR Skills",
+      "quote": "Contract APM HR Skills (PPS-08)",
+      "from": "raw/njp_9820.html"
+    },
+    "bps": {
+      "value": "PPS-8",
+      "quote": "Grade PPS-8",
+      "from": "raw/njp_9820.html"
+    },
+    "vacancies": {
+      "value": 2,
+      "quote": "Vacancies 2 vacancies",
+      "from": "raw/njp_9820.html"
+    },
+    "age_limit": {
+      "value": {
+        "min": null,
+        "max": 45
+      },
+      "quote": "Age: Maximum 45 Years",
+      "from": "raw/njp_9820.html",
+      "also_from": [
+        {
+          "quote": "Age Limit Max: 45 years",
+          "from": "raw/njp_9820.html"
+        }
+      ]
+    },
+    "qualification": {
+      "value": "16 years of education (HEC) in Management Sciences / HR / Business Administration / Computer Sciences / IT",
+      "quote": "Minimum 16 years of education from HEC recognized university in Management Sciences / Human Resource / Business Administration / Computer Sciences/IT",
+      "from": "raw/njp_9820.html"
+    },
+    "domicile_quota": {
+      "value": null,
+      "quote": null
+    },
+    "gender": {
+      "value": null,
+      "quote": null
+    },
+    "experience": {
+      "value": "4 years post-qualification",
+      "quote": "Minimum 04 years of post qualification experience",
+      "from": "raw/njp_9820.html"
+    },
+    "test_service": {
+      "value": null,
+      "quote": null
+    },
+    "last_date": {
+      "value": "2026-10-25",
+      "quote": "Application Deadline 25 Oct 2026",
+      "from": "raw/njp_9820.html"
+    },
+    "ad_no": {
+      "value": null,
+      "quote": null
+    }
+  },
+  "checks": {
+    "quote_back": {
+      "org": true,
+      "post_title": true,
+      "bps": true,
+      "vacancies": true,
+      "age_limit": true,
+      "qualification": true,
+      "experience": true,
+      "last_date": true
+    },
+    "parse_check": {
+      "last_date": true,
+      "bps": true,
+      "age_limit": true
+    },
+    "sanity": {
+      "last_date_not_past": true,
+      "bps_known_scale": true,
+      "age_range_ok": true,
+      "vacancies_positive_int": true
+    },
+    "ocr_only_fields": [],
+    "conflicts": []
+  },
+  "completeness": {
+    "filled": [
+      "org",
+      "post_title",
+      "bps",
+      "vacancies",
+      "age_limit",
+      "qualification",
+      "experience",
+      "last_date"
+    ],
+    "missing": [
+      "domicile_quota",
+      "gender",
+      "test_service",
+      "ad_no"
+    ],
+    "key_missing": [],
+    "filled_count": 8,
+    "of": 12
+  },
+  "status_under_5a": "auto_verified",
+  "status_reason": "all key fields quoted, parse + sanity checks pass"
+}

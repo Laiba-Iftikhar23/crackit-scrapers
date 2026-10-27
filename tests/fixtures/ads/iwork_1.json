@@ -1,0 +1,126 @@
+{
+  "fixture_id": "iwork_1",
+  "source_name": "iWork4Sindh – SJP",
+  "source_url": "https://iwork4sindh.com/public/job/junior-clerk-1792225182-6ad32f9ebd690",
+  "original_doc_url": null,
+  "fetched_at": "2026-10-23T11:45:01+00:00",
+  "method": "fetch (HTML)",
+  "currently_open_at_fetch": true,
+  "extracted_by": "manual extraction by Claude in Phase 0 (not the production Gemini extractor)",
+  "raw_files": [
+    "raw/iwork_jc.html"
+  ],
+  "raw_sha256": {
+    "raw/iwork_jc.html": "382a09f7766a824729490e054eb0686683d94a3c225dcab41e4c5a31388df09f"
+  },
+  "fields": {
+    "org": {
+      "value": "SJP (Sindh Job Portal) — hiring department not named",
+      "quote": "Junior Clerk at SJP Govt Job",
+      "from": "raw/iwork_jc.html",
+      "note": "page names the portal, not the department"
+    },
+    "post_title": {
+      "value": "Junior Clerk",
+      "quote": "Junior Clerk at SJP Govt Job",
+      "from": "raw/iwork_jc.html"
+    },
+    "bps": {
+      "value": null,
+      "quote": null,
+      "note": "no scale on the page"
+    },
+    "vacancies": {
+      "value": 23,
+      "quote": "Total Vacancies 23",
+      "from": "raw/iwork_jc.html"
+    },
+    "age_limit": {
+      "value": {
+        "min": 18,
+        "max": 40
+      },
+      "quote": "Age requirment 18 Year - 40 Year",
+      "from": "raw/iwork_jc.html"
+    },
+    "qualification": {
+      "value": "Matriculation",
+      "quote": "Education Matriculation",
+      "from": "raw/iwork_jc.html"
+    },
+    "domicile_quota": {
+      "value": "Karachi Division (location)",
+      "quote": "Location Karachi Division,Pakistan,Pakistan",
+      "from": "raw/iwork_jc.html",
+      "note": "location only; domicile rule not stated"
+    },
+    "gender": {
+      "value": null,
+      "quote": null
+    },
+    "experience": {
+      "value": "Fresher",
+      "quote": "Experience Fresher",
+      "from": "raw/iwork_jc.html"
+    },
+    "test_service": {
+      "value": null,
+      "quote": null
+    },
+    "last_date": {
+      "value": null,
+      "quote": null,
+      "note": "only a relative time is shown ('Job Expire: 1 week from now'); no absolute date, no ad document"
+    },
+    "ad_no": {
+      "value": null,
+      "quote": null
+    }
+  },
+  "checks": {
+    "quote_back": {
+      "org": true,
+      "post_title": true,
+      "vacancies": true,
+      "age_limit": true,
+      "qualification": true,
+      "domicile_quota": true,
+      "experience": true
+    },
+    "parse_check": {
+      "age_limit": true
+    },
+    "sanity": {
+      "age_range_ok": true,
+      "vacancies_positive_int": true
+    },
+    "ocr_only_fields": [],
+    "conflicts": []
+  },
+  "completeness": {
+    "filled": [
+      "org",
+      "post_title",
+      "vacancies",
+      "age_limit",
+      "qualification",
+      "domicile_quota",
+      "experience"
+    ],
+    "missing": [
+      "bps",
+      "gender",
+      "test_service",
+      "last_date",
+      "ad_no"
+    ],
+    "key_missing": [
+      "last_date",
+      "bps"
+    ],
+    "filled_count": 7,
+    "of": 12
+  },
+  "status_under_5a": "needs_confirmation",
+  "status_reason": "key fields missing: last_date, bps"
+}
